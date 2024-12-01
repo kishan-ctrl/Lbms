@@ -1,0 +1,22 @@
+<input type="text" placeholder="Search Book" [(ngModel)]="searchTerm" (input)="searchBooks()" />
+
+<table>
+  <thead>
+    <tr>
+      <th>BookName</th>
+      <th>Author</th>
+      <th>Faculty</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.bookName }}</td>
+      <td>{{ customer.author }}</td>
+      <td>{{ customer.faculty }}</td>
+     
+    </tr>
+  </tbody>
+</table>
+
+

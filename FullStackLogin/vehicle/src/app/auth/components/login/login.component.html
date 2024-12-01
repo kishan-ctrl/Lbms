@@ -1,0 +1,27 @@
+<div class="bg" style="background-color: #f8f8f8;">
+  <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
+    <div class="parent">
+      <div class="child">
+        <div nz-row class="imgDiv">
+          <div nz-col nzSpan="24">
+            <h1 style="margin-left: 80px;">Login</h1>
+          </div>
+        </div>
+        <form nz-form [formGroup]="loginForm" (ngSubmit)="login()">
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="The input is not valid E-mail">
+              <input nz-input placeholder="E-mail" id="email" formControlName="email">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="Password is required">
+              <input nz-input type="password" placeholder="Password" id="password" formControlName="password">
+            </nz-form-control>
+          </nz-form-item>
+          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" [disabled]="loginForm.invalid">Login</button>
+          Or <a routerLink="/signup" style="font-weight: bolder;">register now!</a>
+        </form>
+      </div>
+    </div>
+  </nz-spin>
+</div>
